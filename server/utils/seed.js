@@ -92,6 +92,8 @@ const seedDB = async () => {
           price: faker.commerce.price(),
           taxable: faker.datatype.boolean(),
           isActive: true,
+          imageUrl: faker.image.urlPicsumPhotos({ width: 640, height: 480 }), // ✅ Dummy image URL
+  imageKey: faker.string.uuid(),
           brand: brands[faker.number.int(brands.length - 1)]._id,
           category: categories[randomCategoryIndex]._id
         });
