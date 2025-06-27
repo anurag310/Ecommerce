@@ -12,8 +12,11 @@ const setupDB = async () => {
     mongoose
       .connect(database.url, {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000, // fail fast after 5 seconds
+      socketTimeoutMS: 45000,         // socket timeout
+      maxPoolSize: 10,
+      keepAlive: true
       })
       .then(() =>
         console.log(`${chalk.green('✓')} ${chalk.blue('MongoDB Connected!')}`)
