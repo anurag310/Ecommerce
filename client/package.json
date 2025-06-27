@@ -4,7 +4,9 @@
   "description": "MERN Ecommerce Client",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && cross-env NODE_ENV=production webpack --mode production --config webpack/webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
+  "vercel-build": "npm run build",
+    //"build": "npm run clean && cross-env NODE_ENV=production webpack --mode production --config webpack/webpack.prod.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack/webpack.dev.js"
   },
   "dependencies": {
