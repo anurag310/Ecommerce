@@ -17,9 +17,9 @@ const API_URL = process.env.API_URL;
 const config = {
   mode: 'production',
   output: {
-    path: path.join(CURRENT_WORKING_DIR, 'dist'),
+    path: path.join(CURRENT_WORKING_DIR, 'client/dist'),
     filename: 'js/[name].[hash].js',
-    publicPath: './'
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -120,7 +120,7 @@ const config = {
       }
     }),
     new HtmlWebpackPlugin({
-      template: path.join(CURRENT_WORKING_DIR, 'client/public/index.html'),
+      template: path.join(CURRENT_WORKING_DIR, 'public/index.html'),
       inject: true,
       minify: {
         removeComments: true,
