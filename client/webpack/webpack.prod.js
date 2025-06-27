@@ -17,7 +17,7 @@ const API_URL = process.env.API_URL;
 const config = {
   mode: 'production',
   output: {
-    path: path.join(CURRENT_WORKING_DIR, 'client/dist'),
+    path: path.join(CURRENT_WORKING_DIR, 'dist'),
     filename: 'js/[name].[hash].js',
     publicPath: '/'
   },
