@@ -31,7 +31,7 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import 'rc-slider/assets/index.css';
 
 // Authentication
-localStorage.setItem('token', JSON.stringify({ token_access: 'abc123' }));
+const token = localStorage.setItem('token');
 
 if (token) {
   // authenticate api authorization
