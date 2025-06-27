@@ -120,7 +120,7 @@ const config = {
       }
     }),
     new HtmlWebpackPlugin({
-      template: path.join(CURRENT_WORKING_DIR, 'public/index.html'),
+      template: path.join(CURRENT_WORKING_DIR, 'client/public/index.html'),
       inject: true,
       minify: {
         removeComments: true,
